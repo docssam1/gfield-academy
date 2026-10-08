@@ -1,0 +1,37 @@
+name: Deploy GFIELD representative homepage
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate and stage public homepage only
+        run: |
+          node --check home.js
+          node --check trial.js
+          mkdir -p _site/assets
+          cp index.html home.css home.js trial.html trial.js _site/
+          cp assets/numbers.png assets/geometry.png assets/science.png _site/assets/
+          cp assets/numbers.mp4 assets/geometry.mp4 assets/science.mp4 _site/assets/
+          test "$(find _site -type f | wc -l)" -eq 11
+          ! grep -q 'msg-science-lab' home.js index.html
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
