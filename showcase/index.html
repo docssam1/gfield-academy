@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="지필드가 직접 만들어 운영 중인 학습·운영 화면 모음.">
+  <title>지필드 작업 모음 | G-FIELD Works</title>
+  <link rel="icon" href="data:,">
+  <style>
+    :root{
+      --paper:#fff;--canvas:#f5f6f8;--ink:#182230;--muted:#566274;--line:#d8dee8;
+      --action:#2456c4;--selected:#eaf0ff;
+    }
+    *{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%}
+    body{
+      margin:0;background:var(--paper);color:var(--ink);
+      font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif;
+      font-size:16px;line-height:1.65;word-break:keep-all;overflow-wrap:break-word;
+    }
+    a{color:inherit;text-underline-offset:5px}
+    a:focus-visible{outline:3px solid var(--action);outline-offset:4px}
+    .wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+    .site-header{min-height:104px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-height:44px;font-weight:700;letter-spacing:-.01em}
+    .brand img{width:116px;height:auto}
+    .brand span{color:var(--muted);font-weight:600}
+    .site-header nav{display:flex;gap:20px;font-size:15px}
+    .site-header nav a{text-decoration:none;color:var(--muted)}
+    .site-header nav a:hover{color:var(--ink)}
+    .hero{padding:56px 0 8px}
+    .eyebrow{margin:0 0 14px;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+    h1{margin:0 0 18px;font-size:clamp(30px,4.4vw,50px);line-height:1.28;letter-spacing:-.02em}
+    .lead{margin:0;max-width:56ch;color:var(--muted);font-size:clamp(16px,1.4vw,19px)}
+    .meta{display:flex;gap:28px;flex-wrap:wrap;margin:38px 0 0;padding:22px 0 0;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+    .meta b{display:block;color:var(--ink);font-size:22px;letter-spacing:-.01em}
+    section.group{padding:56px 0 8px}
+    .group-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+    .group-head h2{margin:0;font-size:clamp(20px,2.2vw,26px);letter-spacing:-.01em}
+    .group-head p{margin:0;color:var(--muted);font-size:15px}
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+    .card{
+      display:flex;flex-direction:column;gap:10px;padding:24px 22px;
+      border:1px solid var(--line);border-radius:14px;background:var(--paper);
+      text-decoration:none;transition:border-color .15s,background .15s,transform .15s;
+    }
+    .card:hover{border-color:var(--action);background:var(--selected);transform:translateY(-2px)}
+    .card .num{font-size:13px;letter-spacing:.12em;color:var(--muted)}
+    .card h3{margin:0;font-size:19px;line-height:1.4;letter-spacing:-.01em}
+    .card p{margin:0;color:var(--muted);font-size:15px}
+    .card .foot{margin-top:auto;padding-top:10px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px;color:var(--muted)}
+    .chip{border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:13px;background:var(--canvas)}
+    .go{color:var(--action);font-weight:600}
+    footer{margin-top:64px;padding:28px 0 56px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  </style>
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="brand" href="https://gfieldacademy.net/" aria-label="지필드 아카데미">
+      <img src="https://lete-on.gfieldacademy.net/number_magic/assets/gfield-logo.png" width="357" height="130" alt="지필드">
+      <span>작업 모음</span>
+    </a>
+    <nav aria-label="바로가기">
+      <a href="#ops">운영</a>
+      <a href="#class">수업·학습</a>
+      <a href="https://gfieldacademy.net/">대표 홈</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <p class="eyebrow">G-FIELD Works</p>
+      <h1>지필드가 직접 만들어<br>지금 돌리고 있는 화면들.</h1>
+      <p class="lead">학원 운영과 수업을 위해 하나씩 만들어 온 웹 화면입니다. 아래 카드를 누르면 실제 운영 중인 주소로 바로 열립니다.</p>
+      <div class="meta">
+        <div><b>11</b>개 화면</div>
+        <div><b>2</b>개 주소 체계</div>
+        <div><b>2026</b>년 현재 운영 중</div>
+      </div>
+    </div>
+
+    <section class="group" id="ops" aria-labelledby="ops-title">
+      <div class="group-head">
+        <h2 id="ops-title">학원 운영</h2>
+        <p>학생 관리와 기록, 그리고 만드는 과정 자체를 보여 주는 화면</p>
+      </div>
+      <div class="grid">
+        <a class="card" href="https://gfieldacademy.net/">
+          <span class="num">01</span>
+          <h3>지필드 아카데미 대표 홈</h3>
+          <p>교육 철학과 세 가지 배움의 공간을 소개하는 대표 화면입니다.</p>
+          <span class="foot"><span class="chip">브랜드</span><span class="go">열기 →</span></span>
+        </a>
+        <a class="card" href="https://docssam1.github.io/gfield-report/">
+          <span class="num">02</span>
+          <h3>스마트 CRM &amp; 리포트</h3>
+          <p>학생별 학습 기록을 모아 학부모 리포트로 정리하는 운영 도구입니다.</p>
+          <span class="foot"><span class="chip">운영 도구</span><span class="go">열기 →</span></span>
+        </a>
+        <a class="card" href="https://docssam1.github.io/gfield-atlas/">
+          <span class="num">03</span>
+          <h3>지필드 뉴럴 아틀라스</h3>
+          <p>저장소와 AI 작업량을 한눈에 보는 대시보드입니다.</p>
+          <span class="foot"><span class="chip">대시보드</span><span class="go">열기 →</span></span>
+        </a>
+        <a class="card" href="https://docssam1.github.io/doossam-education-briefing/">
+          <span class="num">04</span>
+          <h3>GFIELD EDUCATION INSIGHT</h3>
+          <p>교육 이슈와 자료를 모아 두는 브리핑 보드입니다.</p>
+          <span class="foot"><span class="chip">자료</span><span class="go">열기 →</span></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="group" id="class" aria-labelledby="class-title">
+      <div class="group-head">
+        <h2 id="class-title">수업 · 학습</h2>
+        <p>학생이 직접 만지고 움직이며 익히는 수업용 화면</p>
+      </div>
+      <div class="grid">
+        <a class="card" href="https://lete-on.gfieldacademy.net/">
+          <span class="num">05</span>
+          <h3>필즈 더 클래식 (Lete-on)</h3>
+          <p>넘버스 매직·지오메트리·수의 마법을 담은 수업 진행 앱입니다.</p>
+          <span class="foot"><span class="chip">수업 앱</span><span class="go">열기 →</span></span>
+        </a>
+        <a class="card" href="https://hs.gfieldacademy.net/">
+          <span class="num">06</span>
+          <h3>생각하는 황소 대비 아카이브</h3>
+          <p>사고력 문항과 풀이를 정리한 대비 자료 모음입니다.</p>
+          <span class="foot"><span class="chip">자료</span><span class="go">열기 →</span></span>
+        </a>
+        <a class="card" href="https://docssam1.github.io/msg-science-lab/">
+          <span class="num">07</span>
+          <h3>초·과·심 LIVE</h3>
+          <p>과학 실험 수업을 화면으로 따라가는 라이브 자료입니다.</p>
+          <span class="foot"><span class="chip">수업</span><span class="go">열기 →</span></span>
+        </a>
+        <a class="card" href="https://docssam1.github.io/GFIELD-EBOOK/">
+          <span class="num">08</span>
+          <h3>GFIELD-ON</h3>
+          <p>교재를 화면에서 넘겨 보는 전자책 뷰어입니다.</p>
+          <span class="foot"><span class="chip">전자책</span><span class="go">열기 →</span></span>
+        </a>
+        <a class="card" href="https://docssam1.github.io/gfield-smartcanvas/">
+          <span class="num">09</span>
+          <h3>G-FIELD Smart Canvas</h3>
+          <p>판서와 도형을 손으로 다루는 수업용 캔버스입니다.</p>
+          <span class="foot"><span class="chip">수업 도구</span><span class="go">열기 →</span></span>
+        </a>
+        <a class="card" href="https://docssam1.github.io/algebra2/">
+          <span class="num">10</span>
+          <h3>Algebra 2 진단 &amp; 커리큘럼</h3>
+          <p>배치 진단 결과를 커리큘럼 대시보드로 보여 줍니다.</p>
+          <span class="foot"><span class="chip">진단</span><span class="go">열기 →</span></span>
+        </a>
+        <a class="card" href="https://docssam1.github.io/sisa-sangsik-quiz-2026/">
+          <span class="num">11</span>
+          <h3>2026 시사상식 암기실</h3>
+          <p>시사상식 대회를 준비하는 암기·실전 퀴즈 화면입니다.</p>
+          <span class="foot"><span class="chip">퀴즈</span><span class="go">열기 →</span></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <span>지필드 영재교육 · 서울 강남구 대치동</span>
+    <span>각 화면은 실제 운영 중인 주소로 연결됩니다.</span>
+  </footer>
+</body>
+</html>
